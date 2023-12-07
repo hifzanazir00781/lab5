@@ -12,11 +12,13 @@ int max(int x, int y, int z) {
 }
 
 int min(int x,int y,int z){
-  int m = x < y ? x : y;
-  m = m < z ? m : z;
+  int n = x < y ? x : y;
+  n = n < z ? n : z;
+  return n;
 }
 
 int toGrayScaleAverage(int r, int g, int b) {
   //TODO: test this, it may be wrong!
   return (r + g + b) / 3;
 }
+
