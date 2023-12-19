@@ -30,11 +30,16 @@ int toGrayScaleAverage(int r, int g, int b) {
 
 int toGrayScaleLuminosity(int r, int g, int b) {
   //TODO: test this, it may be wrong!
-  return round (0.21*r + 0.769*g + 0.189*b);
+  return round (0.21*r + 0.72*g + 0.07*b);
 }
 
 
 int toSepiaRed(int r, int g, int b) {
   //TODO: test this, it may be wrong!
   return round (0.393*r + 0.769*g + 0.189*b);
+}
+
+int toSepiaGreen(int r, int g, int b) {
+  //TODO: test this, it may be wrong!
+  return round (0.349*r + 0.686*g + 0.168*b);
 }
