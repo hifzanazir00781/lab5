@@ -27,3 +27,9 @@ int toGrayScaleAverage(int r, int g, int b) {
   return (r + g + b) / 3;
 }
 
+
+int toGrayScaleLuminosity(int r, int g, int b) {
+  //TODO: test this, it may be wrong!
+  return round (0.21*r + 0.769*g + 0.189*b);
+}
+
