@@ -228,6 +228,36 @@ r = 180, g = 240, b = 200;
     numPassed++;
   }
 
+   r = 130 , g = 70, b = 90;
+  expectedResult = 107.34 ;
+  printf("TESTING: toSepiagreen(%d,%d,%d): ", r, g, b);
+  result = toSepiagreen(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toSepiagreen returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+  
+   r = 60 , g = 50, b = 80;
+  expectedResult = 53.38 ;
+  printf("TESTING: toSepiablue(%d,%d,%d): ", r, g, b);
+  result = toSepiablue(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toSepiablue returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+
+  
+
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
