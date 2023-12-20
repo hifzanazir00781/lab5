@@ -174,24 +174,49 @@ int main(int argc, char **argv) {
     numPassed++;
   }
 
-  r = 100, g = 39, b = 40;
-  expectedResult = 60;
-  printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
-  result = toGrayScaleAverage(r, g, b);
-  //TODO: this test case will fail, why?
-  if(result != expectedResult) {
-    printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
+ 
+  //TODO: add your test cases here:
+  //      -at least one for each function
+  //        min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
+  //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
+  //       for at least 6 and a total of at least 20
+
+  printf("TESTING: min(%d,%d,%d): ", x, y, z);
+  result = min(x, y, z);
+  if(result != 10) {
+    printf("FAILED: min returned %d, expected 10\n", result);
     numFailed++;
   } else {
     printf("PASSED\n");
     numPassed++;
   }
 
-  //TODO: add your test cases here:
-  //      -at least one for each function
-  //        min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
-  //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
-  //       for at least 6 and a total of at least 20
+  r = 240, g = 100, b = 125;
+  expectedResult = 170;
+  printf("TESTING: toGrayScaleLightness(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLightness(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleLightness returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+
+r = 180, g = 240, b = 200;
+  expectedResult = 224.6;
+  printf("TESTING: toGrayScaleLuminosity(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLuminosity(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toGrayScaleLuminosity returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
+
+  
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
