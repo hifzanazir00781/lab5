@@ -47,5 +47,5 @@ int toSepiaGreen(int r, int g, int b) {
 
 int toSepiaBlue(int r, int g, int b) {
   //TODO: test this, it may be wrong!
-  return round (0.72*r + 0.534*g + 0.131*b);
+  return round (0.272*r + 0.534*g + 0.131*b);
 }
