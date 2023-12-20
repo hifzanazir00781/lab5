@@ -216,7 +216,17 @@ r = 180, g = 240, b = 200;
     numPassed++;
   }
 
-  
+  r = 80, g = 120, b = 50;
+  expectedResult = 132.93 ;
+  printf("TESTING: toSepiaRed(%d,%d,%d): ", r, g, b);
+  result = toSepiaRed(r, g, b);
+  if(result != expectedResult) {
+    printf("FAILED: toSepiaRed returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  } else {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
