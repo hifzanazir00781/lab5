@@ -1,5 +1,6 @@
 
 #include "colorUtils.h"
+#include<math.h>
 
 double rgbIntToFloat(int c) {
   return (c / 255.0);
